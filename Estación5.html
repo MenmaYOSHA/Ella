@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parada en el Tiempo 💜</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at top, #2e004f, #110019, #000);
+      font-family: 'Poppins', sans-serif;
+      color: #e8ccff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 25px;
+      box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .poema {
+      max-width: 420px;
+      text-align: left;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      color: #fff;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    img {
+      width: 340px;
+      height: auto;
+      border-radius: 20px;
+      border: 2px solid #b980ff;
+      box-shadow: 0 0 25px rgba(180, 120, 255, 0.5);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 35px rgba(200, 150, 255, 0.8);
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #d1a7ff;
+      text-align: center;
+      margin-top: 25px;
+      opacity: 0.9;
+      font-weight: 500;
+      z-index: 2;
+    }
+
+    /* Estrellitas animadas */
+    .estrella {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: brillar 4s infinite ease-in-out;
+    }
+
+    @keyframes brillar {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="poema">
+      <h1>Parada en el Tiempo 💫</h1>
+      <p>
+        En la parada del bus el mundo se detuvo,<br>
+        el reloj olvidó su oficio y el viento calló.<br>
+        Todo fue un suspiro, un parpadeo eterno,<br>
+        y entonces tus labios encontraron los míos.<br><br>
+
+        Las luces de la calle parecían estrellas,<br>
+        el murmullo del tráfico se volvió canción,<br>
+        y en ese instante supe —sin saber cómo—<br>
+        que aquel beso sería mi eternidad.<br><br>
+
+        Desde entonces, cada bus que pasa<br>
+        lleva un pedazo de nuestra historia,<br>
+        y cada espera bajo la lluvia<br>
+        me recuerda que te amaré toda la vida. 💜
+      </p>
+    </div>
+
+    <img src="https://media.istockphoto.com/id/1182375180/es/foto/vista-trasera-de-pareja-abrazada-caminando-con-paraguas-en-el-bosque-de-niebla.jpg?s=612x612&w=0&k=20&c=cUF3YfQh6oZix1GK75Aoln1El6WVCYy2LSNrT13HdIs=" alt="Pareja en la parada de bus bajo la lluvia">
+  </div>
+
+  <p>Vamos a la siguiente parte del mapa 🗺️</p>
+
+  <!-- Estrellitas decorativas -->
+  <div class="estrella" style="top:10%; left:20%; animation-delay:0s;"></div>
+  <div class="estrella" style="top:30%; left:70%; animation-delay:1s;"></div>
+  <div class="estrella" style="top:60%; left:40%; animation-delay:2s;"></div>
+  <div class="estrella" style="top:80%; left:80%; animation-delay:3s;"></div>
+  <div class="estrella" style="top:50%; left:10%; animation-delay:1.5s;"></div>
+</body>
+</html>

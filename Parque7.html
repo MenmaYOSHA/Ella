@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gusanito y Cometa 🪁</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #b2f7ef 0%, #eff7f6 50%, #fef6fb 100%);
+      font-family: 'Poppins', sans-serif;
+      color: #3a2b5f;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      max-width: 700px;
+      line-height: 1.5;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 20px 30px;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      backdrop-filter: blur(6px);
+      animation: aparecer 2s ease-in-out;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img {
+      margin-top: 30px;
+      width: 320px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(120, 200, 255, 0.4);
+      border: 2px solid rgba(180, 180, 255, 0.4);
+      animation: flotar 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes flotar {
+      from { transform: translateY(0); }
+      to { transform: translateY(-8px); }
+    }
+
+    p {
+      margin-top: 25px;
+      font-size: 1rem;
+      color: #4e3d6b;
+      font-weight: 500;
+    }
+
+    .nubecita {
+      position: absolute;
+      width: 100px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 50px;
+      filter: blur(2px);
+      animation: moverNube 20s linear infinite;
+    }
+
+    .nubecita::before,
+    .nubecita::after {
+      content: "";
+      position: absolute;
+      background: inherit;
+      width: 60px;
+      height: 60px;
+      top: -20px;
+      border-radius: 50%;
+    }
+
+    .nubecita::before { left: 10px; }
+    .nubecita::after { right: 10px; }
+
+    @keyframes moverNube {
+      from { left: -120px; }
+      to { left: 100vw; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nubecita" style="top: 20%; animation-delay: 0s;"></div>
+  <div class="nubecita" style="top: 35%; animation-delay: 8s;"></div>
+  <div class="nubecita" style="top: 60%; animation-delay: 4s;"></div>
+
+  <h1>"Todavía no nos hemos subido al gusanito, y eso debe estar en la nueva lista que hemos creado.  
+  Claro que el parque nos permitió volar cometa juntos, algo único."</h1>
+
+  <img src="https://us.123rf.com/450wm/yupiramos/yupiramos1811/yupiramos181109846/127643384-pareja-de-ni%C3%B1os-con-cometas-volando-en-el-campo-dise%C3%B1o-de-ilustraciones-vectoriales.jpg?ver=6" alt="Volar cometa juntos">
+
+  <p>Vamos a la siguiente parte del mapa 🗺️</p>
+</body>
+</html>

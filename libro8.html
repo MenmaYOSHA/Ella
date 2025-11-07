@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Promesa 💞</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffb6ff 0%, #b49fff 50%, #8ec5fc 100%);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    }
+
+    img {
+      width: 80%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 25px;
+      box-shadow: 0 4px 40px rgba(255, 255, 255, 0.3);
+      border: 3px solid rgba(255, 255, 255, 0.6);
+      animation: aparecer 2s ease-in-out;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    a.boton {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: linear-gradient(90deg, #b47fff, #ff99cc);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    a.boton:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 35px rgba(255, 255, 255, 0.7);
+    }
+
+    /* Corazones flotando */
+    .corazon {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: flotar 6s infinite ease-in-out;
+      opacity: 0.7;
+    }
+
+    .corazon::before, .corazon::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .corazon::before { top: -9px; left: 0; }
+    .corazon::after { left: -9px; top: 0; }
+
+    @keyframes flotar {
+      0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-250px) rotate(45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Corazones flotantes -->
+  <div class="corazon" style="top:80%; left:10%; animation-delay:0s;"></div>
+  <div class="corazon" style="top:85%; left:30%; animation-delay:1s;"></div>
+  <div class="corazon" style="top:75%; left:60%; animation-delay:2s;"></div>
+  <div class="corazon" style="top:90%; left:80%; animation-delay:3s;"></div>
+  <div class="corazon" style="top:70%; left:50%; animation-delay:1.5s;"></div>
+
+  <!-- Imagen principal -->
+  <img src="https://i.pinimg.com/originals/c9/ea/5e/c9ea5e0512b0ca5b3583047646bc1967.jpg" alt="Nuestra promesa">
+
+  <!-- Botón al video -->
+  <a href="https://www.youtube.com/watch?v=p_1Osm5xE5Y&list=RDp_1Osm5xE5Y&start_radio=1" target="_blank" class="boton">💞 ¿Recuerdas la promesa?</a>
+</body>
+</html>
