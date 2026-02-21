@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un poema para la niña caprichosa ✨</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background: radial-gradient(circle at bottom, #0d1b2a, #000814 80%);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ⭐ ESTRELLAS */
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:transparent;
+    overflow:hidden;
+    z-index:0;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:0.2;}
+    to{opacity:1;}
+}
+
+/* 🌙 LUNA */
+.moon{
+    position:absolute;
+    top:60px;
+    right:80px;
+    width:120px;
+    height:120px;
+    background:#f5f3ce;
+    border-radius:50%;
+    box-shadow:0 0 40px rgba(255,255,200,0.6);
+    z-index:1;
+}
+
+/* ✨ TÍTULO */
+.title{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    margin-top:80px;
+    font-size:38px;
+    font-weight:300;
+    letter-spacing:2px;
+    opacity:0;
+    animation: fadeDown 2s ease forwards;
+}
+
+@keyframes fadeDown{
+    from{transform:translateY(-20px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+/* 📜 POEMA */
+.poem{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:1100px;
+    margin:80px auto;
+    display:flex;
+    justify-content:space-between;
+    opacity:0;
+    animation: fadeIn 3s ease 1.5s forwards;
+}
+
+.column{
+    width:45%;
+    font-size:19px;
+    line-height:1.7;
+}
+
+p{
+    margin-bottom:25px;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* 📱 RESPONSIVE */
+@media(max-width:768px){
+    .title{
+        font-size:28px;
+        padding:0 15px;
+    }
+    .poem{
+        flex-direction:column;
+        align-items:center;
+        margin-top:60px;
+    }
+    .column{
+        width:95%;
+        font-size:17px;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="moon"></div>
+
+<h1 class="title">Un poema para la niña caprichosa ✨</h1>
+
+<div class="poem">
+    <div class="column">
+        <p>Ayer estabas medio rarita,
+        con esa actitud misteriosa
+        de niña que hace pucheros invisibles
+        y lanza miraditas ninja
+        que me pegan directo al corazón.</p>
+
+        <p>Yo, en mi versión insistente profesional,
+        te mandé mensajes como si fueran
+        notificaciones patrocinadas:
+        “Hola preciosa”,
+        “¿Película?”,
+        “¿Y ahora?”,
+        “¿Y ahora sí?”</p>
+
+        <p>Hasta armé una sala en Google Meets,
+        todo listo como si fuera
+        premiere mundial,
+        palomitas imaginarias incluidas
+        y yo esperando
+        a mi actriz favorita.</p>
+    </div>
+
+    <div class="column">
+        <p>Pero tú andabas en tu mundo nocturno,
+        viendo videos como siempre,
+        haciendo scroll con carita seria
+        mientras yo negociaba con el universo
+        para robarte una sonrisita.</p>
+
+        <p>Y aunque no vimos película,
+        aquí estoy otra vez,
+        versión mejorada,
+        con paciencia infinita
+        y corazón en modo “intentar de nuevo”.</p>
+
+        <p>Porque hoy es otro día,
+        otro capítulo,
+        y si tus cambios de humor
+        son montañas rusas,
+        yo feliz me subo…
+        siempre que el premio final
+        sea verte sonreír ✨</p>
+    </div>
+</div>
+
+<script>
+// generar estrellas
+const starsContainer = document.querySelector('.stars');
+for(let i=0;i<150;i++){
+    const star=document.createElement('div');
+    star.classList.add('star');
+    star.style.top=Math.random()*100+"%";
+    star.style.left=Math.random()*100+"%";
+    star.style.animationDuration=(Math.random()*3+2)+"s";
+    starsContainer.appendChild(star);
+}
+</script>
+
+</body>
+</html>
